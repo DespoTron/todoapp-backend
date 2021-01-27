@@ -24,6 +24,14 @@ app.post('/todos', async (req, res) => {
   }
 })
 
+app.get('/', async (req, res) => {
+  try {
+    res.send(200).json([])
+  } catch (err) {
+    console.error(err.message)
+  }
+})
+
 //get all Todos
 app.get('/todos', async (req, res) => {
   try {
